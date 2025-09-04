@@ -188,7 +188,7 @@ nav ul li a:hover{
 }
 
 .about-text p{
-    color: #8a37c4;
+    color: #660066;
     letter-spacing: 1px;
     line-height: 28px;
     font-size: 18px;
@@ -200,14 +200,14 @@ nav ul li a:hover{
 
 /*skills starts*/
 .skills{
-    background: #000000; 
+    background: #fffff0; 
     width: 100%;
     height: 100vh;
     padding: 80px 0px;
 }
 
 .title h2{
-    color: #eff4fd;
+    color: #660066;
     font-size: 75px;
     width: 1130px;
     margin-bottom: 5px;
@@ -241,7 +241,7 @@ nav ul li a:hover{
     display: block;
     text-align: center;
     margin: 25px 0px;
-    color: #8a37c4;
+    color: #660066;
 }
 
 h5{
@@ -301,3 +301,75 @@ h5{
 }
 
 
+.theme-toggle{
+    width: 44px;
+    height: 28px;
+    border-radius: 999px;
+    background: #ddd;
+    position: relative;
+    cursor: pointer;
+    margin-right: 16px;
+    display: inline-block;
+}
+.theme-toggle::after{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform .2s ease;
+}
+body:has(#theme-toggle:checked) .theme-toggle{
+    background: #6a00a8;
+}
+body:has(#theme-toggle:checked) .theme-toggle::after{
+    transform: translateX(16px);
+}
+body:has(#theme-toggle:checked){
+    color: #f3f3f3;
+    background: #0f0f14;
+}
+body:has(#theme-toggle:checked) nav{
+    background: rgba(20, 20, 30, 0.98);
+}
+
+body:has(#theme-toggle:checked) .about{
+    background-color: #111111;
+}
+body:has(#theme-toggle:checked) .services{
+    background: #0d0d12;
+}
+
+body:has(#theme-toggle:checked) .card{
+    background: #171821;
+}
+body:has(#theme-toggle:checked) .contact{
+    background: #0f0f14;
+}
+body:has(#theme-toggle:checked) a{
+    color: #e4d7ff;
+}
+body:has(#theme-toggle:checked) .main-text h2,
+body:has(#theme-toggle:checked) h5,
+body:has(#theme-toggle:checked) .row h3,
+body:has(#theme-toggle:checked) .row h6{
+    color: #f3f3f3;
+}
+body:has(#theme-toggle:checked) .title h2,
+body:has(#theme-toggle:checked) .about-text h2{
+    color: #660066;
+}
+body:has(#theme-toggle:checked) .contact p{
+    color: #e4d7ff;
+}
+body:has(#theme-toggle:checked) .row-icon i{
+    color: #b285e2;
+}
+body:has(#theme-toggle:checked) .title h2{
+    color: #e4d7ff;
+}
+body:has(#theme-toggle:checked) .skills{
+    background: #0d0d12;
